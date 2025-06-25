@@ -1,2 +1,0 @@
-# Task-SP
-Script tarefas
