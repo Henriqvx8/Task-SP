@@ -7,13 +7,13 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #0f172a;
-    color: #f8fafc;
+    color: #f1f5f9;
 }
 
 header {
-    text-align: center;
-    padding: 40px 20px;
     background-color: #1e293b;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 header h1 {
@@ -22,26 +22,33 @@ header h1 {
 }
 
 header p {
+    margin-top: 10px;
     color: #cbd5e1;
 }
 
-.scripts {
+main {
     padding: 40px 20px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
 }
 
-.scripts h2 {
+h2 {
     color: #38bdf8;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .card {
     background-color: #1e293b;
     padding: 20px;
     border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
 }
 
 .card h3 {
@@ -49,25 +56,33 @@ header p {
     margin-bottom: 10px;
 }
 
-.card a {
-    color: #38bdf8;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
+.card p {
+    margin-bottom: 15px;
 }
 
-.card a:hover {
-    text-decoration: underline;
+.button {
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0ea5e9;
 }
 
 .tutorial {
     background-color: #1e293b;
-    padding: 40px 20px;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 50px;
 }
 
-.tutorial h2 {
-    color: #38bdf8;
-    margin-bottom: 20px;
+.tutorial ol {
+    padding-left: 20px;
 }
 
 .tutorial ol li {
@@ -75,8 +90,9 @@ header p {
 }
 
 footer {
-    background-color: #0f172a;
     text-align: center;
     padding: 20px;
+    background-color: #0f172a;
     color: #64748b;
+    margin-top: 40px;
 }
