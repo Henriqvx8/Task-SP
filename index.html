@@ -1,59 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task-SP | Automação Escolar</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-SP | Automação Escolar</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Task<span>SP</span> 🚀</h1>
-        <p>Automatizador para Sala do Futuro e CMSP</p>
+  <div class="container">
+    <div class="card">
+      <h1>Task<span>SP</span> 🚀</h1>
+      <p>Automatizador para Sala do Futuro e CMSP</p>
 
-        <div class="card">
-            <label for="ra">RA:</label>
-            <input type="text" id="ra" placeholder="RA + dígito + sp | Ex.: 12345679sp">
+      <input type="text" id="ra" placeholder="Digite seu RA + dígito + sp">
+      <input type="password" id="senha" placeholder="Senha">
 
-            <label for="senha">Senha:</label>
-            <div class="senha-container">
-                <input type="password" id="senha" placeholder="Senha">
-                <span class="toggleSenha" onclick="mostrarSenha()">👁️</span>
-            </div>
+      <div class="check">
+        <input type="checkbox" id="robot">
+        <label for="robot">Eu não sou um robô</label>
+      </div>
 
-            <label class="checkbox">
-                <input type="checkbox" id="robot">
-                <span>Eu não sou um robô</span>
-            </label>
+      <button onclick="login()">🔓 Entrar</button>
 
-            <button onclick="login()">🔓 Entrar</button>
+      <div class="actions" id="actions">
+        <button onclick="mostrarAtividades('pendente')">📜 Atividades Pendentes</button>
+        <button onclick="mostrarAtividades('expirada')">⏳ Atividades Expiradas</button>
+      </div>
 
-            <div class="botoes" id="botoes">
-                <button onclick="mostrarAtividades('pendente')">📜 Atividades Pendentes</button>
-                <button onclick="mostrarAtividades('expirada')">⏳ Atividades Expiradas</button>
-            </div>
+      <div class="atividade" id="atividade">
+        <h2>Selecionar Atividade</h2>
+        <select id="lista">
+          <option value="Matemática">Matemática</option>
+          <option value="Português">Português</option>
+          <option value="Ciências">Ciências</option>
+          <option value="História">História</option>
+        </select>
+        <input type="number" id="tempo" placeholder="Tempo (min)" min="1" value="5">
+        <button onclick="executarTarefa()">🚀 Iniciar</button>
+      </div>
 
-            <div class="atividade" id="atividade">
-                <h3>Selecionar Atividade</h3>
-
-                <label for="lista">Atividade:</label>
-                <select id="lista">
-                    <option value="Atividade de Matemática">Atividade de Matemática</option>
-                    <option value="Atividade de Português">Atividade de Português</option>
-                    <option value="Atividade de Ciências">Atividade de Ciências</option>
-                    <option value="Atividade de História">Atividade de História</option>
-                </select>
-
-                <label for="tempo">Tempo (em minutos):</label>
-                <input type="number" id="tempo" value="5" min="1">
-
-                <button onclick="executarTarefa()">🚀 Iniciar</button>
-            </div>
-
-            <p id="status"></p>
-        </div>
+      <p id="status"></p>
     </div>
+  </div>
 
 <script src="js/script.js"></script>
 </body>
