@@ -3,48 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task-SP - Scripts Escolares</title>
+    <title>Task-SP 🚀 | Scripts Escolares</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Task-SP 🚀</h1>
-        <p>Automatize tarefas escolares com um clique.</p>
+        <p>Seu portal de automação de tarefas escolares.</p>
     </header>
 
-    <section class="scripts">
-        <h2>📜 Scripts Disponíveis</h2>
-        
-        <div class="card">
-            <h3>✅ Script Sala do Futuro</h3>
-            <p>Preenche automaticamente as tarefas.</p>
-            <a href="javascript:(function(){alert('🚀 Task-SP iniciado! Aguarde...');const inputs=document.querySelectorAll('input');inputs.forEach(i=>{if(i.type==='text'||i.type==='textarea'){i.value='Resposta automática';}if(i.type==='radio'||i.type==='checkbox'){i.checked=true;}});alert('✅ Tarefa preenchida com sucesso!');})();">
-                👉 Clique e arraste para a barra de favoritos
-            </a>
-        </div>
+    <main>
+        <section class="scripts">
+            <h2>🛠️ Scripts Disponíveis</h2>
 
-        <div class="card">
-            <h3>✅ Script Matific (Beta)</h3>
-            <p>Resolve atividades automaticamente.</p>
-            <a href="javascript:(function(){alert('🚀 Matific iniciado!');document.querySelectorAll('button').forEach(b=>{if(b.innerText.includes('Responder')||b.innerText.includes('Iniciar')){b.click();}});})();">
-                👉 Clique e arraste para a barra de favoritos
-            </a>
-        </div>
+            <div class="card">
+                <h3>✅ Sala do Futuro</h3>
+                <p>Preenche automaticamente as respostas da plataforma.</p>
+                <a class="button" href="javascript:(function(){alert('🚀 Task-SP iniciado! Aguarde...');const inputs=document.querySelectorAll('input, textarea, select');inputs.forEach(input=>{if(input.type==='text'||input.tagName==='TEXTAREA'){input.value='Resposta automática';}if(input.type==='radio'||input.type==='checkbox'){input.checked=true;}if(input.tagName==='SELECT'){input.selectedIndex=1;}});alert('✅ Tarefa preenchida com sucesso!');})();">
+                    🚀 Usar Script
+                </a>
+            </div>
 
-    </section>
+            <div class="card">
+                <h3>✅ Matific (Beta)</h3>
+                <p>Inicia automaticamente as atividades da ilha.</p>
+                <a class="button" href="javascript:(function(){alert('🚀 Matific iniciado!');const botoes=[...document.querySelectorAll('button')];botoes.forEach(btn=>{if(btn.innerText.includes('Iniciar')||btn.innerText.includes('Responder')||btn.innerText.includes('Próximo')){btn.click();}});alert('✅ Matific executado!');})();">
+                    🚀 Usar Script
+                </a>
+            </div>
+        </section>
 
-    <section class="tutorial">
-        <h2>🎯 Como usar?</h2>
-        <ol>
-            <li>Arraste o link acima para a barra de favoritos (PC).</li>
-            <li>Entre no site da sua escola.</li>
-            <li>Clique no favorito que você criou.</li>
-            <li>Pronto! O script vai rodar.</li>
-        </ol>
-    </section>
+        <section class="tutorial">
+            <h2>🎯 Como Usar?</h2>
+            <ol>
+                <li>✅ No PC, <strong>arraste o botão 🚀</strong> para sua barra de favoritos.</li>
+                <li>✅ No celular, pressione e segure, copie o link e cole na barra de endereços quando estiver na plataforma.</li>
+                <li>✅ Acesse a plataforma (Sala do Futuro ou Matific).</li>
+                <li>✅ Clique no favorito e pronto, ele faz tudo!</li>
+            </ol>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2025 - Task-SP | Feito por Você</p>
+        <p>© 2025 | Task-SP | Feito por Você 😎</p>
     </footer>
 </body>
 </html>
