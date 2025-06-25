@@ -1,52 +1,49 @@
-function mostrarSenha() {
-    const senha = document.getElementById("senha");
-    senha.type = senha.type === "password" ? "text" : "password";
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-SP | Automação Escolar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-function login() {
-    const ra = document.getElementById("ra").value;
-    const senha = document.getElementById("senha").value;
-    const robot = document.getElementById("robot").checked;
-    const status = document.getElementById("status");
+  <div class="container">
+    <div class="card">
+      <h1>Task<span>SP</span> 🚀</h1>
+      <p>Automatizador para Sala do Futuro e CMSP</p>
 
-    if (ra === "" || senha === "") {
-        status.innerText = "❌ Preencha todos os campos!";
-        status.style.color = "red";
-        return;
-    }
+      <input type="text" id="ra" placeholder="Digite seu RA + dígito + sp">
+      <input type="password" id="senha" placeholder="Senha">
 
-    if (!robot) {
-        status.innerText = "❌ Marque 'Eu não sou um robô'";
-        status.style.color = "red";
-        return;
-    }
+      <div class="check">
+        <input type="checkbox" id="robot">
+        <label for="robot">Eu não sou um robô</label>
+      </div>
 
-    status.innerText = "✅ Login efetuado com sucesso!";
-    status.style.color = "#22c55e";
+      <button onclick="login()">🔓 Entrar</button>
 
-    document.getElementById("botoes").style.display = "block";
-}
+      <div class="actions" id="actions">
+        <button onclick="mostrarAtividades('pendente')">📜 Atividades Pendentes</button>
+        <button onclick="mostrarAtividades('expirada')">⏳ Atividades Expiradas</button>
+      </div>
 
-function mostrarAtividades(tipo) {
-    const atividade = document.getElementById("atividade");
-    atividade.style.display = "block";
+      <div class="atividade" id="atividade">
+        <h2>Selecionar Atividade</h2>
+        <select id="lista">
+          <option value="Matemática">Matemática</option>
+          <option value="Português">Português</option>
+          <option value="Ciências">Ciências</option>
+          <option value="História">História</option>
+        </select>
+        <input type="number" id="tempo" placeholder="Tempo (min)" min="1" value="5">
+        <button onclick="executarTarefa()">🚀 Iniciar</button>
+      </div>
 
-    const status = document.getElementById("status");
-    if (tipo === "pendente") {
-        status.innerText = "📜 Atividades pendentes carregadas!";
-    } else {
-        status.innerText = "⏳ Atividades expiradas carregadas!";
-    }
-}
+      <p id="status"></p>
+    </div>
+  </div>
 
-function executarTarefa() {
-    const atividadeSelecionada = document.getElementById("lista").value;
-    const tempo = parseInt(document.getElementById("tempo").value) * 1000;
-    const status = document.getElementById("status");
-
-    status.innerText = `🚀 Executando ${atividadeSelecionada}...`;
-
-    setTimeout(() => {
-        status.innerText = `✅ ${atividadeSelecionada} concluída com sucesso!`;
-    }, tempo);
-        }
+<script src="js/script.js"></script>
+</body>
+</html>
