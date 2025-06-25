@@ -8,7 +8,6 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #0f172a;
     color: #f8fafc;
-    line-height: 1.6;
 }
 
 header {
@@ -61,16 +60,6 @@ header p {
     text-decoration: underline;
 }
 
-.card .code {
-    background-color: #0f172a;
-    padding: 10px;
-    border-radius: 10px;
-    font-family: monospace;
-    font-size: 0.9em;
-    margin-top: 10px;
-    overflow-x: auto;
-}
-
 .tutorial {
     background-color: #1e293b;
     padding: 40px 20px;
@@ -90,4 +79,4 @@ footer {
     text-align: center;
     padding: 20px;
     color: #64748b;
-                                }
+}
