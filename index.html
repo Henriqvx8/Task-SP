@@ -3,51 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task-SP | Automação Escolar</title>
+    <title>Task-SP 🚀 | Automação Escolar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Task-SP 🚀</h1>
-        <p>Seu site de automação de tarefas escolares</p>
-    </header>
+    <div class="container">
+        <h1>Task<span>SP</span> 🚀</h1>
+        <p>Automatizador para Sala do Futuro e CMSP</p>
 
-    <main>
-        <!-- Área de Login -->
-        <section class="login">
-            <h2>🔐 Login</h2>
-            <label>RA:</label>
-            <input type="text" id="ra" placeholder="Digite seu RA">
-            <label>Senha:</label>
-            <input type="password" id="senha" placeholder="Digite sua senha">
-            <button onclick="fazerLogin()">Entrar</button>
-            <p id="loginStatus"></p>
-        </section>
+        <div class="card">
+            <label for="ra">RA:</label>
+            <input type="text" id="ra" placeholder="RA + dígito + sp | Ex.: 12345679sp">
 
-        <!-- Área de Tarefas -->
-        <section class="tarefas" style="display: none;">
-            <h2>📝 Escolher Atividade</h2>
+            <label for="senha">Senha:</label>
+            <div class="senha-container">
+                <input type="password" id="senha" placeholder="Senha">
+                <span class="toggleSenha" onclick="mostrarSenha()">👁️</span>
+            </div>
 
-            <label>Selecione a atividade:</label>
-            <select id="atividade">
-                <option>Atividade 1 - Matemática</option>
-                <option>Atividade 2 - Português</option>
-                <option>Atividade 3 - Ciências</option>
-                <option>Atividade 4 - História</option>
-            </select>
+            <label>
+                <input type="checkbox" id="robot"> Eu não sou um robô
+            </label>
 
-            <label>Tempo (em minutos):</label>
-            <input type="number" id="tempo" min="1" value="5">
+            <button onclick="login()">🔓 Entrar</button>
 
-            <button onclick="executarTarefa()">Iniciar Atividade</button>
-            <p id="statusExecucao"></p>
-        </section>
-    </main>
+            <div class="botoes" id="botoes" style="display: none;">
+                <button onclick="executar('pendente')">📜 Atividades Pendentes</button>
+                <button onclick="executar('expirada')">⏳ Atividades Expiradas</button>
+            </div>
 
-    <footer>
-        <p>© 2025 | Task-SP | Criado por Você</p>
-    </footer>
+            <p id="status"></p>
+        </div>
+    </div>
 
 <script src="script.js"></script>
 </body>
