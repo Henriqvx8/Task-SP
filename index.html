@@ -3,44 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskerPlus - Scripts Escolares</title>
+    <title>Task-SP - Scripts Escolares</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>TaskerPlus</h1>
-        <p>Automatize suas atividades da plataforma educacional com segurança.</p>
+        <h1>Task-SP 🚀</h1>
+        <p>Automatize tarefas escolares com um clique.</p>
     </header>
 
     <section class="scripts">
         <h2>📜 Scripts Disponíveis</h2>
+        
         <div class="card">
             <h3>✅ Script Sala do Futuro</h3>
-            <p>Preenche tarefas automaticamente.</p>
-            <a href="javascript:(function(){alert('Cole seu script aqui');})();">👉 Clique e arraste para sua barra de favoritos</a>
-            <p class="code">javascript:(function(){/* código do script aqui */})();</p>
+            <p>Preenche automaticamente as tarefas.</p>
+            <a href="javascript:(function(){alert('🚀 Task-SP iniciado! Aguarde...');const inputs=document.querySelectorAll('input');inputs.forEach(i=>{if(i.type==='text'||i.type==='textarea'){i.value='Resposta automática';}if(i.type==='radio'||i.type==='checkbox'){i.checked=true;}});alert('✅ Tarefa preenchida com sucesso!');})();">
+                👉 Clique e arraste para a barra de favoritos
+            </a>
         </div>
 
         <div class="card">
-            <h3>✅ Script Matific</h3>
+            <h3>✅ Script Matific (Beta)</h3>
             <p>Resolve atividades automaticamente.</p>
-            <a href="javascript:(function(){alert('Cole seu script aqui');})();">👉 Clique e arraste para sua barra de favoritos</a>
-            <p class="code">javascript:(function(){/* código do script aqui */})();</p>
+            <a href="javascript:(function(){alert('🚀 Matific iniciado!');document.querySelectorAll('button').forEach(b=>{if(b.innerText.includes('Responder')||b.innerText.includes('Iniciar')){b.click();}});})();">
+                👉 Clique e arraste para a barra de favoritos
+            </a>
         </div>
+
     </section>
 
     <section class="tutorial">
         <h2>🎯 Como usar?</h2>
         <ol>
-            <li>Arraste o link acima para sua barra de favoritos (PC) ou copie.</li>
-            <li>Acesse o site da sua escola.</li>
-            <li>Clique no favorito ou cole o código na barra de endereços.</li>
-            <li>Pronto! O script irá executar automaticamente.</li>
+            <li>Arraste o link acima para a barra de favoritos (PC).</li>
+            <li>Entre no site da sua escola.</li>
+            <li>Clique no favorito que você criou.</li>
+            <li>Pronto! O script vai rodar.</li>
         </ol>
     </section>
 
     <footer>
-        <p>© 2025 - TaskerPlus | Desenvolvido por Você</p>
+        <p>© 2025 - Task-SP | Feito por Você</p>
     </footer>
 </body>
 </html>
