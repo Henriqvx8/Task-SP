@@ -1,88 +1,56 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: #0f172a;
+    background: radial-gradient(circle at top, #0f172a, #000);
     color: #f1f5f9;
     font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header {
-    background-color: #1e293b;
-    padding: 40px 20px;
+.container {
     text-align: center;
 }
 
-header h1 {
-    color: #38bdf8;
+h1 {
     font-size: 3em;
-}
-
-header p {
-    color: #cbd5e1;
-    margin-top: 10px;
-}
-
-main {
-    padding: 40px 20px;
-    max-width: 600px;
-    margin: auto;
-}
-
-section {
-    background-color: #1e293b;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-h2 {
-    color: #38bdf8;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
     color: #facc15;
 }
 
-input, select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    margin-bottom: 15px;
-}
-
-button {
-    background-color: #38bdf8;
-    color: #0f172a;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0ea5e9;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0f172a;
-    color: #64748b;
+h1 span {
+    color: #38bdf8;
 }
 
 p {
-    margin-top: 10px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
 }
+
+.card {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+    width: 320px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #334155;
+    color: white;
+    outline: none;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
