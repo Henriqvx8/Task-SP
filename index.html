@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task-SP 🚀 | Scripts Escolares</title>
+    <title>Task-SP | Automação Escolar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <h1>Task-SP 🚀</h1>
-        <p>Seu portal de automação de tarefas escolares.</p>
+        <p>Seu site de automação de tarefas escolares</p>
     </header>
 
     <main>
-        <section class="scripts">
-            <h2>🛠️ Scripts Disponíveis</h2>
-
-            <div class="card">
-                <h3>✅ Sala do Futuro</h3>
-                <p>Preenche automaticamente as respostas da plataforma.</p>
-                <a class="button" href="javascript:(function(){alert('🚀 Task-SP iniciado! Aguarde...');const inputs=document.querySelectorAll('input, textarea, select');inputs.forEach(input=>{if(input.type==='text'||input.tagName==='TEXTAREA'){input.value='Resposta automática';}if(input.type==='radio'||input.type==='checkbox'){input.checked=true;}if(input.tagName==='SELECT'){input.selectedIndex=1;}});alert('✅ Tarefa preenchida com sucesso!');})();">
-                    🚀 Usar Script
-                </a>
-            </div>
-
-            <div class="card">
-                <h3>✅ Matific (Beta)</h3>
-                <p>Inicia automaticamente as atividades da ilha.</p>
-                <a class="button" href="javascript:(function(){alert('🚀 Matific iniciado!');const botoes=[...document.querySelectorAll('button')];botoes.forEach(btn=>{if(btn.innerText.includes('Iniciar')||btn.innerText.includes('Responder')||btn.innerText.includes('Próximo')){btn.click();}});alert('✅ Matific executado!');})();">
-                    🚀 Usar Script
-                </a>
-            </div>
+        <!-- Área de Login -->
+        <section class="login">
+            <h2>🔐 Login</h2>
+            <label>RA:</label>
+            <input type="text" id="ra" placeholder="Digite seu RA">
+            <label>Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+            <button onclick="fazerLogin()">Entrar</button>
+            <p id="loginStatus"></p>
         </section>
 
-        <section class="tutorial">
-            <h2>🎯 Como Usar?</h2>
-            <ol>
-                <li>✅ No PC, <strong>arraste o botão 🚀</strong> para sua barra de favoritos.</li>
-                <li>✅ No celular, pressione e segure, copie o link e cole na barra de endereços quando estiver na plataforma.</li>
-                <li>✅ Acesse a plataforma (Sala do Futuro ou Matific).</li>
-                <li>✅ Clique no favorito e pronto, ele faz tudo!</li>
-            </ol>
+        <!-- Área de Tarefas -->
+        <section class="tarefas" style="display: none;">
+            <h2>📝 Escolher Atividade</h2>
+
+            <label>Selecione a atividade:</label>
+            <select id="atividade">
+                <option>Atividade 1 - Matemática</option>
+                <option>Atividade 2 - Português</option>
+                <option>Atividade 3 - Ciências</option>
+                <option>Atividade 4 - História</option>
+            </select>
+
+            <label>Tempo (em minutos):</label>
+            <input type="number" id="tempo" min="1" value="5">
+
+            <button onclick="executarTarefa()">Iniciar Atividade</button>
+            <p id="statusExecucao"></p>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 | Task-SP | Feito por Você 😎</p>
+        <p>© 2025 | Task-SP | Criado por Você</p>
     </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
