@@ -1,0 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: radial-gradient(circle at top, #0f172a, #000); color: #fff; font-family: 'Poppins', sans-serif; height: 100vh; display: flex; justify-content: center; align-items: center; }
+.container { text-align: center; }
+.card { background: rgba(30, 41, 59, 0.8); border-radius: 20px; backdrop-filter: blur(15px); box-shadow: 0 8px 30px rgba(0,0,0,0.7); padding: 30px; width: 400px; transition: 0.3s; }
+.card:hover { transform: scale(1.02); }
+h1 { font-size: 3em; color: #facc15; }
+h1 span { color: #38bdf8; }
+p { color: #cbd5e1; margin-bottom: 20px; }
+input, select { width: 100%; padding: 15px; border-radius: 12px; border: none; margin-bottom: 15px; background-color: #334155; color: white; font-size: 1em; }
+input::placeholder { color: #94a3b8; }
+button { width: 100%; padding: 15px; border: none; border-radius: 12px; background: linear-gradient(90deg, #38bdf8, #facc15); color: #0f172a; font-weight: bold; cursor: pointer; margin-top: 10px; transition: transform 0.2s, background 0.4s; }
+button:hover { transform: scale(1.05); background: linear-gradient(90deg, #facc15, #38bdf8); }
+.check { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; justify-content: left; }
+.actions { display: none; margin-top: 10px; }
+.actions button { background: linear-gradient(90deg, #9333ea, #f43f5e); margin-bottom: 10px; }
+.atividade { display: none; margin-top: 10px; }
+.atividade h2 { color: #38bdf8; margin-bottom: 10px; }
+#status { margin-top: 10px; color: #22c55e; font-weight: bold; min-height: 20px; }
